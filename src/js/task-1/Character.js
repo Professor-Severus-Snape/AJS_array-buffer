@@ -38,7 +38,7 @@ export default class Character {
     // линейный расчёт атаки текущего игрока:
     let resultAttack = (1 - (this.distance - 1) * 0.1) * this.currentAttack;
 
-    if (this.isStoned) {
+    if (this.stoned) {
       // логарифмический расчёт атаки текущего игрока с учётом дурмана:
       resultAttack -= Math.log2(this.distance) * 5;
     }
