@@ -1,5 +1,7 @@
 # Домашнее задание к лекции «ArrayBuffer»
 
+[![Build status](https://ci.appveyor.com/api/projects/status/anoqg8ppvvmkwxtk?svg=true)](https://ci.appveyor.com/project/Professor-Severus-Snape/ajs-array-buffer)
+
 ## Важно:
 1. Код должен проходить ESLint без ошибок.
 2. Unit-тесты должны обеспечивать 100% покрытие тестируемых функций и классов по строкам.
