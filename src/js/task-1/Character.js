@@ -1,4 +1,10 @@
 export default class Character {
+  #distance = null;
+
+  #stoned = null;
+
+  #attack = null;
+
   constructor(name, type) {
     if (!name || typeof name !== 'string' || name.length < 2 || name.length > 10) {
       throw new Error('Ошибка в параметре name');
@@ -15,28 +21,28 @@ export default class Character {
   }
 
   set distance(intValue) {
-    this.currentDistance = intValue;
+    this.#distance = intValue;
   }
 
   get distance() {
-    return this.currentDistance;
+    return this.#distance;
   }
 
   set stoned(booleanValue) {
-    this.isStoned = booleanValue;
+    this.#stoned = booleanValue;
   }
 
   get stoned() {
-    return this.isStoned;
+    return this.#stoned;
   }
 
   set attack(intValue) {
-    this.currentAttack = intValue;
+    this.#attack = intValue;
   }
 
   get attack() {
     // линейный расчёт атаки текущего игрока:
-    let resultAttack = (1 - (this.distance - 1) * 0.1) * this.currentAttack;
+    let resultAttack = (1 - (this.distance - 1) * 0.1) * this.#attack;
 
     if (this.stoned) {
       // логарифмический расчёт атаки текущего игрока с учётом дурмана:

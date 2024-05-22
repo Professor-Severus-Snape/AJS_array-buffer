@@ -33,20 +33,14 @@ test('testing of setter/getter (stoned)', () => {
   expect(character.stoned).toBe(true);
 });
 
-test('testing of setter (attack)', () => {
-  const character = new Character('персонаж', 'Daemon');
-  character.attack = 100;
-  expect(character.currentAttack).toBe(100);
-});
-
-test('testing of getter (attack)', () => {
+test('testing of setter/getter (attack)', () => {
   const character = new Character('персонаж', 'Daemon');
   character.distance = 2;
   character.attack = 100;
   expect(character.attack).toBe(90);
 });
 
-test('testing of getter (attack) with stoned character', () => {
+test('testing of setter/getter (attack) with stoned character', () => {
   const character = new Character('персонаж', 'Daemon');
   character.distance = 2;
   character.stoned = true;

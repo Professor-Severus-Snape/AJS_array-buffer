@@ -6,4 +6,5 @@ module.exports = {
     jest: true, // для корректной работы ESLint с Jest
   },
   extends: 'airbnb-base', // Airbnb JavaScript Style
+  parser: '@babel/eslint-parser', // fixes "unexpected token" errors (e.g. '#' in privateFields)
 };
